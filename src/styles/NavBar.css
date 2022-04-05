@@ -1,0 +1,35 @@
+.navbar {
+    background-color: white;
+    border-bottom: 5px solid grey;
+}
+
+.navbar-links {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-logo {
+    width: 25%;
+    max-width: 200px;
+    height: 15%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+ul {
+    padding: 20px;
+    text-align: center;
+    list-style-type: none;
+}
+
+ul li {
+    display: inline-block;
+    font-size: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
+    color: purple;
+    font-weight: bold;
+}
