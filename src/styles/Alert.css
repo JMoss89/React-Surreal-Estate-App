@@ -1,0 +1,20 @@
+.alert-success{
+    background-color: lightgreen;
+    border-radius: 3px;
+    width: 70%;
+    color:black;
+    justify-content: center;
+    display: block;
+    margin:auto;
+    padding: 0px 0px;
+}
+
+.alert-error{
+    background-color: lightcoral;
+    border-radius: 3px;
+    width: 60%;
+    color:black;
+    justify-content: center;
+    display: block;
+    margin:auto
+}

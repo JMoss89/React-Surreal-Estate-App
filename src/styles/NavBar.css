@@ -1,11 +1,17 @@
 .navbar {
     background-color: white;
     border-bottom: 5px solid grey;
+    justify-content: center;
+    border-width: 5px;
+    padding-top: 17px;
 }
 
 .navbar-links {
     margin: 0;
     padding: 0;
+    margin-block-start: auto;
+    padding-inline-start: 0px;
+    justify-content: center;
 }
 
 .navbar-logo {
@@ -25,7 +31,7 @@ ul {
     list-style-type: none;
 }
 
-ul li {
+.navbar-links-item {
     display: inline-block;
     font-size: 40px;
     padding-left: 60px;
