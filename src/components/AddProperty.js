@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import '../styles/AddProperty.css';
 import axios from 'axios';
+import '../styles/AddProperty.css';
+import Alert from './Alert';
 
 function AddProperty() {
     const initialState = {
@@ -19,6 +20,7 @@ function AddProperty() {
         }
     }
     const [fields, setFields] = useState(initialState.fields);
+    const [alert, setAlert] = useState(initialState.alert);
     
     const handleAddProperty = (event) => {
         event.preventDefault(); // ***
@@ -32,7 +34,19 @@ function AddProperty() {
                 city: fields.city,
                 email: fields.email,
             })
-    }
+            .then(() => {
+                setAlert({
+                    message: "Your Property Has Been Added",
+                    isSuccess: true,
+                });
+            })
+            .catch(() => {
+                setAlert({
+                    message: "Attempt Failed! Please Try Again Later",
+                    isSuccess: false,
+                });
+            });
+    };
 
     const handleFieldChange = (event) => {
         setFields({...fields, [event.target.name]: event.target.value});
@@ -40,8 +54,11 @@ function AddProperty() {
     // onSubmit and onClick
     return (
         <div className='AddProperty'>
+            <h1>Add A Property</h1>
             <form onSubmit={handleAddProperty}> 
-
+                {alert.message && (
+                    <Alert message={alert.messasge} success={alert.isSuccess} />
+                )}
                 <div>
                     <label htmlFor='title'>
                         <p>Title</p>
