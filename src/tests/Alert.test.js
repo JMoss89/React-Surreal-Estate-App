@@ -30,4 +30,4 @@ describe('Alert', () => {
       
         expect(asFragment()).toMatchSnapshot();
     });
-})
+});
